@@ -23,15 +23,17 @@
             android:id="@+id/heroNameEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/hero_image"
             android:layout_alignTop="@id/hero_image"
             android:layout_marginStart="16dp"
-            android:hint="Superhero name"/>
+            android:maxLines="1"
+            android:layout_toEndOf="@id/hero_image"
+            android:hint="Superhero name" />
 
         <EditText
             android:id="@+id/alteregoEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:layout_toEndOf="@id/hero_image"
             android:layout_alignBottom="@id/hero_image"
             android:layout_marginStart="16dp"
@@ -81,18 +83,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/poderTv"
-            android:layout_marginTop="12dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
             android:progressTint="@color/yellow"
 
             />
 
         <Button
-            android:id="@+id/boton"
+            android:id="@+id/saveBoton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guardar"
             android:layout_alignParentBottom="true"
+            android:text="Guardar"
 
             />
 
