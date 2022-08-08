@@ -17,17 +17,17 @@ class MainActivity : AppCompatActivity() {
             val alterEgo=binding.alteregoEdit.text.toString()
             val biografia= binding.biografiaEditText.text.toString()
             val power=binding.ratingBar.rating
-            openDetailActivity(superHeroName,alterEgo,biografia,power)
+
+            val hero= Superhero(superHeroName,alterEgo,biografia,power)
+            openDetailActivity(hero)
 
         }
     }
 
-    private fun openDetailActivity(name:String, alter:String, bio:String, power:Float) {
+    private fun openDetailActivity(superhero:Superhero) {
+        //explicit intent != implicit intent
         val intent= Intent(this, DetailActivity::class.java)
-        intent.putExtra("superhero_name", name)
-        intent.putExtra("alterego_hero",alter)
-        intent.putExtra("biografia_hero",bio)
-        intent.putExtra("power_hero",power)
+        intent.putExtra(DetailActivity.SUPERHERO_KEY, superhero)
         startActivity(intent)
     }
 }

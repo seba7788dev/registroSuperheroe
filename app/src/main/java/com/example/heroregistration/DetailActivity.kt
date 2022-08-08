@@ -6,6 +6,10 @@ import com.example.heroregistration.databinding.ActivityDetailBinding
 import com.example.heroregistration.databinding.ActivityMainBinding
 
 class DetailActivity : AppCompatActivity() {
+    companion object{
+        const val SUPERHERO_KEY = "superhero"
+
+    }
     lateinit var binding: ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding= ActivityDetailBinding.inflate(layoutInflater)
@@ -13,15 +17,12 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bundle= intent.extras!!
-        val superhero_name=bundle.getString("superhero_name") ?: ""
-        val alterego_hero=bundle.getString("alterego_hero") ?: ""
-        val biografia_hero=bundle.getString("biografia_hero") ?: ""
-        val power_hero=bundle.getFloat("power_hero")
+        val superhero=bundle.getParcelable<Superhero>(SUPERHERO_KEY)
 
-        binding.heroName.text=superhero_name
-        binding.alterEgotv.text=alterego_hero
-        binding.biografiaTv.text=biografia_hero
-        binding.powerHero.rating=power_hero
+        binding.heroName.text=superhero?.nombre
+        binding.alterEgotv.text=superhero?.alterego
+        binding.biografiaTv.text=superhero?.bio
+        binding.powerHero.rating=superhero?.rating ?: 0.0f
 
 
     }
