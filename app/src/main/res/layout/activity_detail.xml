@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="superhero"
+            type="com.example.heroregistration.Superhero" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:text="Iron Man"
+            android:text="@{superhero.nombre}"
             android:textColor="@color/black"
             android:textSize="32dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Tony Stark"
+            android:text="@{superhero.alterego}"
             android:textColor="@color/black"
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Genio, millonario, playboy y filantropo. Heroe nacional"
+            android:text="@{superhero.bio}"
             android:textColor="@color/black"
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +111,7 @@
             android:progressTint="@color/yellow"
             app:layout_constraintTop_toBottomOf="@id/poderRating"
             android:isIndicator="true"
+            android:rating="@{superhero.rating}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp" />

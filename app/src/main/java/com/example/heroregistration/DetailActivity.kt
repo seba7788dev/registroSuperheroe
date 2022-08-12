@@ -18,11 +18,14 @@ class DetailActivity : AppCompatActivity() {
 
         val bundle= intent.extras!!
         val superhero=bundle.getParcelable<Superhero>(SUPERHERO_KEY)
-
+/*
         binding.heroName.text=superhero?.nombre
         binding.alterEgotv.text=superhero?.alterego
         binding.biografiaTv.text=superhero?.bio
-        binding.powerHero.rating=superhero?.rating ?: 0.0f
+        binding.powerHero.rating=superhero?.rating ?: 0.0f*/
+
+        //el superhero viene del xml, declarada la variable del data binding
+        binding.superhero = superhero
 
 
     }
