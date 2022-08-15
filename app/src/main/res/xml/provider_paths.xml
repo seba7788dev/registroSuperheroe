@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+a donde van a ir a buscar las otras apps, a las q les mandemos la uri, a donde iran a buscar nuestros archivos
+-->
+
+    <external-files-path name="superhero_images" path="."/>
+</PreferenceScreen>

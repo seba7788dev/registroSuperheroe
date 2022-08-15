@@ -6,12 +6,34 @@
     <data>
 
     </data>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".MainActivity"
         android:padding="16dp">
+
+        <Button
+            android:id="@+id/saveBoton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Guardar"
+
+
+            />
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/saveBoton"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveBoton"
+       >
 
         <ImageView
             android:id="@+id/hero_image"
@@ -53,19 +75,19 @@
             android:id="@+id/bioTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bio"
-            android:textSize="26sp"
             android:layout_below="@+id/linea"
             android:layout_marginTop="22dp"
+            android:text="Bio"
             android:textAlignment="center"
-            />
+            android:textSize="26sp" />
+
         <EditText
             android:id="@+id/biografiaEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bioTv"
             android:layout_marginTop="18dp"
-            android:maxLines="2"/>
+             />
 
         <TextView
             android:id="@+id/poderTv"
@@ -89,14 +111,11 @@
 
             />
 
-        <Button
-            android:id="@+id/saveBoton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Guardar"
 
-            />
+
+    </RelativeLayout>
+</ScrollView>
+
 
     </RelativeLayout>
 </layout>
